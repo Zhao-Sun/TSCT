@@ -43,10 +43,10 @@ mkdir dataset
 **Please put them in the `./dataset` directory**
 
 ### Training Example
-- In `scripts/ `, we provide the model implementation *Dlinear/Autoformer/Informer/Transformer*
-- In `FEDformer/scripts/`, we provide the *FEDformer* implementation
-- In `Pyraformer/scripts/`, we provide the *Pyraformer* implementation
-
+- python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path electricity.csv  --model_id electricity_1600_96   --model TSCT  --data custom  --features M  --seq_len 1600 --pred_len 96  --enc_in 321 --des 'Exp'  --itr 1 --batch_size 16  --learning_rate 0.005  --train_epochs 30  --reduction  --r 2   --kernel_size 50  --is_adapt --gpu 0
+- python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path electricity.csv  --model_id electricity_1600_192  --model TSCT  --data custom  --features M  --seq_len 1600 --pred_len 192 --enc_in 321 --des 'Exp'  --itr 1 --batch_size 16  --learning_rate 0.005  --train_epochs 30  --reduction  --r 2   --kernel_size 35  --is_adapt --gpu 0
+- python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path electricity.csv  --model_id electricity_1600_336  --model TSCT  --data custom  --features M  --seq_len 1600 --pred_len 336 --enc_in 321 --des 'Exp'  --itr 1 --batch_size 128 --learning_rate 0.005  --train_epochs 30  --reduction  --r 2   --kernel_size 35  --is_adapt --gpu 0
+- python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path electricity.csv  --model_id electricity_1600_720  --model TSCT  --data custom  --features M  --seq_len 1600 --pred_len 720 --enc_in 321 --des 'Exp'  --itr 1 --batch_size 128 --learning_rate 0.005  --train_epochs 30  --reduction  --r 60  --kernel_size 35  --is_adapt --gpu 0
 
 ## Citing
 
