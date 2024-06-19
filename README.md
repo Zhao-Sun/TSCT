@@ -14,10 +14,8 @@ Beside TSCT, we provide five significant forecasting Transformers to re-implemen
 - [x] [Transformer](https://arxiv.org/abs/1706.03762) (NeuIPS 2017)
 - [x] [Informer](https://arxiv.org/abs/2012.07436) (AAAI 2021 Best paper)
 - [x] [Autoformer](https://arxiv.org/abs/2106.13008) (NeuIPS 2021)
-- [x] [Pyraformer](https://openreview.net/pdf?id=0EXmFzUn5I) (ICLR 2022 Oral)
 - [x] [FEDformer](https://arxiv.org/abs/2201.12740) (ICML 2022)
 - [x] [PatchTST](https://openreview.net/forum?id=Jbdc0vTOcol) (ICLR 2023)
-
 
 
 
