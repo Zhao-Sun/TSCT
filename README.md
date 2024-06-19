@@ -6,7 +6,7 @@ This is a Pytorch implementation of TSCT: "[Improving Long-Term Electricity Time
 ## Features
 - [x] Support both Univariate and Multivariate long-term time series forecasting.
 - [x] Support visualization of weights.
-- [x] Support scripts on different [look-back window size](https://github.com/cure-lab/DLinear/tree/main/scripts/EXP-LookBackWindow).
+- [x] Support scripts on different look-back window size.
 
 
 
@@ -16,7 +16,7 @@ Beside TSCT, we provide five significant forecasting Transformers to re-implemen
 - [x] [Autoformer](https://arxiv.org/abs/2106.13008) (NeuIPS 2021)
 - [x] [Pyraformer](https://openreview.net/pdf?id=0EXmFzUn5I) (ICLR 2022 Oral)
 - [x] [FEDformer](https://arxiv.org/abs/2201.12740) (ICML 2022)
-- [x] [patchTST](https://openreview.net/forum?id=Jbdc0vTOcol) (ICLR 2023)
+- [x] [PatchTST](https://openreview.net/forum?id=Jbdc0vTOcol) (ICLR 2023)
 
 
 
@@ -47,46 +47,18 @@ mkdir dataset
 - In `FEDformer/scripts/`, we provide the *FEDformer* implementation
 - In `Pyraformer/scripts/`, we provide the *Pyraformer* implementation
 
-For example:
 
-To train the **DLinear** on **Exchange-Rate dataset**, you can use the scipt `scripts/EXP-LongForecasting/DLinear/exchange_rate.sh`:
-```
-sh scripts/EXP-LongForecasting/DLinear/exchange_rate.sh
-```
-It will start to train DLinear, the results will be shown in `logs/LongForecasting`. 
-
-All scripts about using DLinear on long forecasting task is in `scripts/EXP-LongForecasting/DLinear/`, you can run them in a similar way. The default look-back window in scripts is 96, DLinear generally achieves better results with longer look-back window as dicussed in the paper. For instance, you can simpy change the **seq_len** (look-back window size) in scripts to 336 to obtain better performance.
-
-Scripts about look-back window size and long forecasting of FEDformer and Pyraformer is in `FEDformer/scripts` and `Pyraformer/scripts`, respectively. To run them, you need to first `cd FEDformer` or `cd Pyraformer`. Then, you can use sh to run them in a similar way. Logs will store in `logs/`.
-
-Each experiment in `scripts/EXP-LongForecasting/DLinear/` takes 5min-20min. For other Transformer scripts, since we put all related experiments in one script file, directly running them will take 8 hours-1 day. You can keep the experiments you interested in and comment out the others. 
-
-### DLinear Weights Visualization
-As shown in our paper, the weights of DLinear can reveal some charateristic of the data, i.e., the periodicity. We provide the weight visualization of DLinear in `weight_plot.py`. To run the visualization, you need to input the model path (model_name) of DLinear (the model directory in `./checkpoint` by default).
-
-![image](pics/Visualization.png)
 ## Citing
 
 If you find this repository useful for your work, please consider citing it as follows:
 
 ```bibtex
-@article{Zeng2022AreTE,
-  title={Are Transformers Effective for Time Series Forecasting?},
-  author={Ailing Zeng and Muxi Chen and Lei Zhang and Qiang Xu},
-  journal={arXiv preprint arXiv:2205.13504},
-  year={2022}
+@article{xxx,
+  title={Improving Long-Term Electricity Time Series Forecasting in Smart Grid with a Three-Stage Channel-Temporal Approach},
+  author={xxx},
+  journal={Journal of Cleaner Production},
+  year={2024}
 }
 ```
 
 Please remember to cite all the datasets and compared methods if you use them in your experiments.
-
-## Detailed Description
-
-
-This code is simply build on the code base of Autoformer. We appreciate the following github repos a lot for their valuable code base or datasets:
-
-The implementation of Autoformer, Informer, Transformer is from https://github.com/thuml/Autoformer
-
-The implementation of FEDformer is from https://github.com/MAZiqing/FEDformer
-
-The implementation of Pyraformer is from https://github.com/alipay/Pyraformer
