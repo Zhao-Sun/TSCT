@@ -1,6 +1,6 @@
 # TSCT
 
-This is a Pytorch implementation of TSCT: "[Improving Long-Term Electricity Time Series Forecasting in Smart Grid with a Three-Stage Channel-Temporal Approach](xxx.pdf)". 
+This is a Pytorch implementation of TSCT: "[Improving Long-Term Electricity Time Series Forecasting in Smart Grid with a Three-Stage Channel-Temporal Approach](https://www.sciencedirect.com/science/article/pii/S0959652624025009?casa_token=zpZYcjbgm-QAAAAA:u324SFp8PEpqKA1dX-t_N1GhZhcPuxWkPkrwYO0EJXlj-jiizY46cRCQsqPTZo-IFmXBPUgw9Voy)". 
 
 
 ## Features
@@ -44,7 +44,7 @@ mkdir dataset
 ```
 - python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path electricity.csv  --model_id electricity_1600_96   --model TSCT  --data custom  --features M  --seq_len 1600 --pred_len 96  --enc_in 321 --des 'Exp'  --itr 1 --batch_size 16  --learning_rate 0.005  --train_epochs 30  --reduction  --r 2   --kernel_size 50  --is_adapt 
 - python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path electricity.csv  --model_id electricity_1600_192  --model TSCT  --data custom  --features M  --seq_len 1600 --pred_len 192 --enc_in 321 --des 'Exp'  --itr 1 --batch_size 16  --learning_rate 0.005  --train_epochs 30  --reduction  --r 2   --kernel_size 35  --is_adapt 
-- python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path electricity.csv  --model_id electricity_512_336  --model TSCT  --data custom  --features M  --seq_len 512 --pred_len 336 --enc_in 321 --des 'Exp'  --itr 1 --batch_size 128 --learning_rate 0.005  --train_epochs 30  --reduction  --r 2   --kernel_size 35  --is_adapt 
+- python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path electricity.csv  --model_id electricity_1600_336  --model TSCT  --data custom  --features M  --seq_len 1600 --pred_len 336 --enc_in 321 --des 'Exp'  --itr 1 --batch_size 128 --learning_rate 0.005  --train_epochs 30  --reduction  --r 2   --kernel_size 35  --is_adapt 
 - python -u run_longExp.py --is_training 1 --root_path ./dataset/ --data_path electricity.csv  --model_id electricity_1600_720  --model TSCT  --data custom  --features M  --seq_len 1600 --pred_len 720 --enc_in 321 --des 'Exp'  --itr 1 --batch_size 128 --learning_rate 0.005  --train_epochs 30  --reduction  --r 60  --kernel_size 35  --is_adapt 
 ```
 
@@ -53,11 +53,13 @@ mkdir dataset
 If you find this repository useful for your work, please consider citing it as follows:
 
 ```bibtex
-@article{xxx,
+@article{sun2024improving,
   title={Improving Long-Term Electricity Time Series Forecasting in Smart Grid with a Three-Stage Channel-Temporal Approach},
-  author={xxx},
+  author={Sun, Zhao and Song, Dongjin and Peng, Qinke and Li, Haozhou and Li, Pulin},
   journal={Journal of Cleaner Production},
-  year={2024}
+  pages={143051},
+  year={2024},
+  publisher={Elsevier}
 }
 ```
 
